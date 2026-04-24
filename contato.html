@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Entra21</title>
+    </head>
+    <body>
+        <!--Vamos inserir um formulário-->
+        <!--Types: text/password/email/number/date/checkbox/radio/file-->
+        <form action="enviar.php" method="post">
+            <div>
+                <label for="nome_completo">Nome Completo:</label>
+                <input type="text" name="nome_completo" id="nome_completo" required>
+            </div>
+            <div>
+                <label for="email_usuario">E-mail:</label>
+                <input type="email" name="email_usuario" id="email_usuario" required>
+            </div>
+            <div>
+                <label for="idade">Idade:</label>
+                <input type="number" name="idade" id="idade" required>
+            </div>
+            <hr>
+            <div>
+                <label for="cidade">Cidade:</label>
+                <select name="cidade" id="cidade">
+                    <option value="1">Balneáro Camboriú</option> <!--Normalmente é inserido dinamicamente-->
+                    <option value="2">Itajaí</option>
+                    <option value="3">Itapema</option>
+                    <option value="4">Camboriú</option>
+                    <option value="5">Blumenau</option>
+                </select>
+            </div>
+            <div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" rows="5"maxlenght="10"></textarea>
+            </div>
+            <div>
+                <label for="label_sexo">Sexo:</label> <!--Aplicação de botões para seleção-->
+
+                <div>
+                    <input type="radio" name="sexo" id="sexo_m" value="m">
+                    <label for="sexo_m">Masculino:</label>
+                </div>
+                <div>
+                    <input type="radio" name="sexo" id="sexo_f" value="f">
+                    <label for="sexo_f">Feminino:</label>
+                </div>              
+                <div>
+                    <input type="radio" name="sexo" id="sexo_o" value="o">
+                    <label for="sexo_o">Outro:</label>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Enviar dados</button>
+            </div>
+         </form>
+    </body>
+</html>
